@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Tiny5&display=swap');
+
+html{
+    background: #000000;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Courier New', Courier, monospace; */
+    background: linear-gradient(
+        85deg,
+        #06005a,
+        #000000,
+        #0d3a56
+    );
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body_font{
+    font-family: 'Noto Sans Mono' monospace;
+    font-weight: 600;
+}
+
+.title_font{
+    font-family: "Tiny5", system-ui;
+    font-weight: 400;
+}
+
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.center{
+    text-align: center;
+}
+
+.xl{
+    font-size: 3em;
+}
+
+h1{
+    margin-bottom: 0.5em;
+    margin-top: 0em;
+    font-size: 2em;
+    color: #3b779d;
+}
+
+nav{
+    background-color: aliceblue;
+    margin-top: 0.8em;
+    border-radius: 1.5em;
+    padding: 1em;
+    box-shadow: 0px 8em 4em 1em #080075;
+
+    a{
+        text-decoration: none;
+        margin-inline: 0.8em;
+        color: #114f75;
+        transition: 0.3s ease-in-out all;
+    }
+}
+
+nav a:hover{
+    color: #3b779d;
+    text-shadow: #202375 0px 5px 10px;
+}
+
+
+section{
+    max-width: 45em;
+    margin-top: 3em;
+    margin-inline: 0.5em;
+
+    article{
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2em;
+
+        img{
+            height: 10rem;
+            justify-content: center;
+            margin-top: 2em;
+            margin-inline: 1.5em;
+
+        }
+    }
+    a{
+        text-align: center;
+        text-decoration: none;
+        color: aliceblue;
+        background: linear-gradient(
+            90deg,
+            #080075,
+            #114f75
+        );
+        border-radius: 1.5em;
+        padding: 0.6em;
+        transition: 0.3s ease-in-out all;
+    }
+
+}
+
+section a:hover{
+    box-shadow: #06005a 0px 0px 15px 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    border-radius: 1.5em;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    background-image: linear-gradient(
+        90deg,
+        rgba(20,20,20,0.3),
+        rgba(70,70,70,0.3)
+    );
+    padding: 1em;
+}
