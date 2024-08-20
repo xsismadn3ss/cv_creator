@@ -1,0 +1,35 @@
+{% extends "master.html" %}
+{% block title %}Crear CV{% endblock title %}
+
+{% block content %}
+<section class="body_font">
+    <h1>------</h1>
+    <section>
+        <form method="post">
+            {% csrf_token %}
+            <label for="name">Nombre:</label>
+            <input type="text" name="" id="">
+
+            <label for="email">Email:</label>
+            <input type="text" name="" id="">
+            
+            <label for="phone">Telefono:</label>
+            <input type="text" name="" id="">
+            
+            <label for="urls">Enlaces de contacto:</label>
+            <input type="text" name="" id="">
+
+            <labxel for="about">Sobre mi:</labxel>
+            <textarea name="" id=""></textarea>
+
+            <label for="experience">Experiencia:</label>            
+            <textarea name="" id=""></textarea>
+            
+            <label for="Certificados y Educación">Experiencia:</label>            
+            <textarea name="" id=""></textarea>
+            
+            <button type="button">Enviar</button>
+        </form>
+    </section>
+</section>
+{% endblock content %}
