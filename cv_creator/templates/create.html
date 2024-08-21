@@ -12,10 +12,6 @@
             {% csrf_token %}
             <div class="card">
                 <h2>Datos personales</h2>
-                <label for="name">Nombre:</label>
-                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre completo">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="example@server.com">
                 <label for="phone">Telefono:</label>
                 <input type="number" name="phone" id="phone" placeholder="(503) 0000-0000">
                 <label for="urls">Enlaces de contacto(opcional):</label>
@@ -47,7 +43,7 @@
                 <textarea name="lang" id="lang"
                     placeholder="Formato: Español (nativo), Ingles (intermedio)..."></textarea>
             </div>
-            <button type="button" onclick="validate()">Crear</button>
+            <button style="width:100%" class="btn" type="button" onclick="validate()">Crear</button>
         </form>
         <script src="{% static "js/validate.js" %}"></script>
     </section>
