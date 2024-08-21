@@ -17,4 +17,4 @@ class CV(models.Model):
     lang = models.CharField(null=False, max_length=255)
 
     # foreign key
-    user_id = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE)
