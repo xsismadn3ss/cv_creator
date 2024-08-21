@@ -5,30 +5,24 @@
 
 {% block content %}
 <section class="body_font">
-        <h1 class="title_font xl center" style="margin-bottom: 2em; margin-top:0.5em;">CV CREATOR</h1>
-        <article>
-            <img src="{% static "img/page.svg" %}" alt="">
-            <div class="card left">
-                <h1>Crea</h1>
-                <p>Crea tu primer curriculum virtual o renueva y mejora uno ya existente, Cv Creator es tu solución.</p>
-                <a href="{% url "create" %}">Empieza ahora</a>
-            </div>
-        </article>
+    <h1 class="title_font xl center" style="margin-top:0.5em;">CV CREATOR</h1>
+    <p class="center">Crea tu primer curriculum virtual o renuevalo.</p>
+    <a class="center" style="margin-bottom:12rem;" href="{% url "create" %}">Empieza ahora</a>
 
-        <article>
-            <div class="card right">
-                <h1>Mas simple</h1>
-                <p>Rellena un formulario y Cv Creator se encarga del diseño y presentación por ti</p>
-            </div>
-            <img src="{% static "img/pencil.svg" %}" alt="">
-        </article>
+    <article>
+        <div class="card right">
+            <h1>Mas simple</h1>
+            <p>Rellena un formulario y Cv Creator se encarga del diseño y presentación por ti</p>
+        </div>
+        <img src="{% static "img/pencil.svg" %}" alt="">
+    </article>
 
-        <article>
-            <img src="{% static "img/download.svg" %}" alt="">
-            <div class="card left">
-                <h1>Descarga</h1>
-                <p>Guarda en tu dispositivo los curriculum creados en la página web</p>
-            </div>
-        </article>
-    </section>
+    <article>
+        <img src="{% static "img/download.svg" %}" alt="">
+        <div class="card left">
+            <h1>Descarga</h1>
+            <p>Guarda en tu dispositivo los curriculum creados en la página web</p>
+        </div>
+    </article>
+</section>
 {% endblock content %}
