@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <title>{% block title %}{% endblock title %}</title>
+    <title>Cv Generator | {% block title %}{% endblock title %}</title>
 </head>
-<body>
+<body class="body_font">
     <nav class="body_font">
-        <a href="{% url "create" %}">Cv Creator</a>
+        <a href="{% url "home" %}">Inicio</a>
         <a href="">Contacto</a>
         <a href="">Acerca de</a>
+
+        {% if is_auth == True %}
+        <a href="{% url "logout" %}"> Cerrar sesión </a>
+        {% else %}
+        <a href="{% url "login" %}"> Iniciar sesión </a>
+        {% endif %}
     </nav>
     {% block content %}{% endblock content %}
 </body>
