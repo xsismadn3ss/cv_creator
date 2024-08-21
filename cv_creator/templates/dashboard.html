@@ -9,10 +9,13 @@
   {% for cv in cvList %}
   <div class="card">
     <h3>{{ cv.title }}</h3>
-    <div>
-        <a class="btn" href="">Editar</a>
-        <a class="btn exit" href='result/{{cv.id}}' type="submit">Ver</a>
-    </div>
+    <form method="post">
+      {% csrf_token %}
+        <a style="text-decoration:none; margin-right:1em" class="btn" href="edit/{{cv.id}}">Editar</a>
+        <a style="text-decoration:none" class="btn" href="result/{{cv.id}}">Ver</a>
+        <input type="number" value="{{ cv.id }}" hidden="true" name="id" value="id">
+        <button type="submit" class="btn exit" href="">Eliminar</button>
+    </form>
   </div>
   {% endfor %}
 

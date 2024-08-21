@@ -5,49 +5,48 @@
 
 {% block content %}
 <section class="body_font">
-    <h1 class="xl center">Crea tu CV</h1>
-
+    <h1 class="xl center">Editar</h1>
     <section>
         <form id="form" method="post">
             {% csrf_token %}
             <div class="card">
                 <label for="title">Titulo</lable>
-                <input type="text" name="title" id="title" placeholder="Agrega un titulo">
+                <input type="text" name="title" id="title" placeholder="Agrega un titulo" value="{{ cv.title }}">
             </div>
             <div class="card">
                 <h2>Datos personales</h2>
                 <label for="phone">Telefono:</label>
-                <input type="number" name="phone" id="phone" placeholder="(503) 0000-0000">
+                <input type="number" name="phone" id="phone" placeholder="(503) 0000-0000" value="{{ cv.phone }}">
                 <label for="urls">Enlaces de contacto(opcional):</label>
-                <input style="margin-bottom: 1em;" type="text" name="urls" id="urls"
+                <input style="margin-bottom: 1em;" type="text" name="urls" id="urls" value="{{ cv.urls }}"
                     placeholder="Linkeid, github, etc. asegurate de separarlos por coma">
             </div>
 
             <div class="card">
                 <h2>Descripción</h2>
                 <label for="job">Profesión</label>
-                <input type="text" name="job" id="job" placeholder="Indica cual es tu profesión">
+                <input type="text" name="job" id="job" placeholder="Indica cual es tu profesión" value="{{ cv.job }}">
                 <label for="about">Sobre mi:</labxel>
                     <textarea name="about" id="about"
-                        placeholder="Cuanta algo sobre ti, una buena presentación lo cambia todo"></textarea>
+                        placeholder="Cuanta algo sobre ti, una buena presentación lo cambia todo">{{ cv.about }}"</textarea>
                     <label for="experience">Experiencia:</label>
-                    <textarea name="exp" id="exp" placeholder="Escribe tu esperiencia previa"></textarea>
+                    <textarea name="exp" id="exp" placeholder="Escribe tu esperiencia previa">{{ cv.exp }}</textarea>
                     <label for="education">Historial académico:</label>
                     <textarea name="education" id="education"
-                        placeholder="Ingresa tu nivel academico y certificados aquí"></textarea>
+                        placeholder="Ingresa tu nivel academico y certificados aquí">{{ cv.edu }}</textarea>
             </div>
 
             <div class="card">
                 <h2>Habilidades</h2>
                 <label for="top">Habilidades principales:</label>
-                <input type="text" name="top" id="top" placeholder="Indica en que eres bueno">
-                <label for="soft">Habilidades blandas:</label>
-                <input type="text" name="soft" id="soft" placeholder="Indica las habilidades que te complementan">
+                <input type="text" name="top" id="top" placeholder="Indica en que eres bueno" value="{{ cv.top_skills }}">
+                <label for="soft">Habilidades blandas:</label>|
+                <input type="text" name="soft" id="soft" placeholder="Indica las habilidades que te complementan" value="{{ cv.soft_skills }}">
                 <label for="lang">Idiomas:</label>
                 <textarea name="lang" id="lang"
-                    placeholder="Formato: Español (nativo), Ingles (intermedio)..."></textarea>
+                    placeholder="Formato: Español (nativo), Ingles (intermedio)...">{{ cv.lang }}</textarea>
             </div>
-            <button style="width:100%" class="btn" type="button" onclick="validate()">Crear</button>
+            <button style="width:100%" class="btn" type="button" onclick="validate()">Guardar</button>
         </form>
         <script src="{% static "js/validate.js" %}"></script>
     </section>
