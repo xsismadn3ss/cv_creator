@@ -8,9 +8,10 @@
 </head>
 <body class="body_font">
     <nav class="body_font">
-        <a href="{% url "home" %}">Inicio</a>
+        <a href="{% url "dashboard" %}">Inicio</a>
         <a href="">Contacto</a>
-        <a href="">Acerca de</a>
+        <a href="{% url "dashboard" %}">Acerca de</a>
+        <a href="{% url "account" %}">Cuenta</a>
     </nav>
     {% block content %}{% endblock content %}
 </body>
