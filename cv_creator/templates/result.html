@@ -1,0 +1,59 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ cv.title }}</title>
+    <link rel="stylesheet" href="{% static "css/cv.css" %}">
+</head>
+<body>
+    <div>
+        <p>
+        <h1>{{ cv.name }}</h1>
+        <h2>{{ cv.job }}</h2>
+        <strong>Contacto</strong>
+        <br>
+        <strong>Correo: </strong>{{ cv.email }}
+        <br>
+        <strong>Telefono: </strong>{{ cv.phone }}
+        <br>
+        <strong>Links:</strong>
+        {% for link in links %}
+        <a href="{{ link }}">{{ link }}</a>
+        {% endfor %}
+        <hr>
+    
+        <h3>Sobre mi:</h3>
+        {{ cv.about }}
+    
+        <h3>Experiencia:</h3>
+        {{ cv.exp }}
+    
+        <h3>Educación y certificados:</h3>
+        {% for e in edu %}
+        {{ e }}
+        <br>{% endfor %}
+    
+        <hr>
+        <div class="col2">
+            <div style="margin-right: 1em;">
+                <h3>Hablidades principales:</h3>
+                {% for t in top %}
+                {{ t }}
+                <br>{% endfor %}
+            </div>
+            <div style="margin-left:1em;">
+                <h3>Hablidades blandas:</h3>
+                {% for s in soft %}
+                {{ s }}
+                <br>{% endfor %}
+            </div>
+        </div>
+        <h3>Idiomas</h3>
+        {% for l in lang %}
+        {{ l }}
+        <br>{% endfor %}
+        </p>
+    </div>
+</body>
+</html>
