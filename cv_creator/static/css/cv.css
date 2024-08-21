@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+
+body{
+    font-family: "Noto Sans Mono";
+    font-size: 0.8em;
+}
+
+h1{
+    font-size:large;
+}
+h2{
+    font-size: larger;
+}
+h3{
+    margin-bottom: 0.2em;
+}
+p{
+    font-size: 0.4em;
+}
+
+.col2{
+    display:flex;
+    flex-direction: row;
+}
