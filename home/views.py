@@ -31,7 +31,7 @@ def login_view(request: HttpRequest):
             print(user)
             if user is not None:
                 login(request=request, user=user, backend=None)
-                return redirect("create")
+                return redirect("dashboard")
 
             else:
                 context = {
@@ -43,13 +43,18 @@ def login_view(request: HttpRequest):
 
     else:
         form = LoginForm()
-        return render(request, template, {"form": form, "warning": ""})
+        return render(request, template, {"form": form})
 
 
 @login_required()
 def account(request: HttpRequest):
     template = "account.html"
     user = User.objects.get(id=request.user.id)
+
+    if request.method == "POST":
+        logout(request)
+        return redirect('home')
+    
     return render(request, template, {"user": user})
 
 

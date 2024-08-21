@@ -5,20 +5,26 @@
 {% block content %}
 <section>
   <h1 class="title_font xl center">Cuenta</h1>
-  <article class="card" style="flex-direction: column;">
-    <div>
+  {% comment %} <article style="flex-direction: column;"> {% endcomment %}
+    <form class="card" method="post">
+      {% csrf_token %}
+      <div>
         <label for="">Username: </label><span>{{ user.username }}</span>
-    </div>
-    <div>
-        <label for="">Nombres: </label><span>{{ user.first_name }}</span>
-    </div>
-    <div>
-        <label for="">Apellidos: </label><span>{{ user.last_name }}</span>
-    </div>
-    <div>
-        <label for="">Email: </label><span>{{ user.email }}</span>
-    </div>
-    <a class="btn center" href="{% url "edit_account" %}" style="text-decoration: none; color:aliceblue;">Editar</a>
-  </article>
+      </div>
+      <div>
+          <label for="">Nombres: </label><span>{{ user.first_name }}</span>
+      </div>
+      <div>
+          <label for="">Apellidos: </label><span>{{ user.last_name }}</span>
+      </div>
+      <div>
+          <label for="">Email: </label><span>{{ user.email }}</span>
+      </div>
+      <div>
+        <a class="btn center" href="{% url "edit_account" %}" style="text-decoration: none; color:aliceblue;">Editar</a>
+        <button class="exit btn" type="submit" href="">Cerrar sesión</button>
+      </div>
+    </form>
+  {% comment %} </article> {% endcomment %}
 </section>
 {% endblock content %}
