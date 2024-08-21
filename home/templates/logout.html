@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Cerrar sesión{% endblock title %}
+
+{% block content %}
+<section>
+    <h1 class="xl center">Cerrar sesión</h1>
+    <form class="card" style="flex-direction: row;" action="" method="post">
+        {% csrf_token %}
+        <button class="back" ><a style="text-decoration: none; color:aliceblue;" href="{% url "home" %}">Cancelar</a></button>
+        <button class="exit" type="submit">Cerrar sesión</button>
+    </form>
+</section>
+{% endblock content  %}
