@@ -1,8 +1,8 @@
 function validate() {
   // elements
   const form = document.getElementById("form");
-  const name = document.getElementById("name");
-  const email = document.getElementById("email");
+  // const name = document.getElementById("name");
+  // const email = document.getElementById("email");
   const phone = document.getElementById("phone");
   const job = document.getElementById("job");
   const urls = document.getElementById("urls");
@@ -19,7 +19,6 @@ function validate() {
 
   // check if empty
   if (
-    name.value.length < 1 ||
     job.value.length < 1 ||
     phone.value.length < 1 ||
     about.value.length < 1 ||
@@ -30,11 +29,6 @@ function validate() {
     soft.value.length < 1
   ) {
     msg = "Por favor rellena los campos faltantes";
-    alert(msg);
-  }
-  // check email
-  else if (!Regexemail.test(email.value)) {
-    msg = "El correo no es valido";
     alert(msg);
   } else {
     form.submit()
