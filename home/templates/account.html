@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+
+{% block title %}Cuenta{% endblock title %} 
+
+{% block content %}
+<section>
+  <h1 class="title_font xl center">Cuenta</h1>
+  <article class="card" style="flex-direction: column;">
+    <div>
+        <label for="">Username: </label><span>{{ user.username }}</span>
+    </div>
+    <div>
+        <label for="">Nombres: </label><span>{{ user.first_name }}</span>
+    </div>
+    <div>
+        <label for="">Apellidos: </label><span>{{ user.last_name }}</span>
+    </div>
+    <div>
+        <label for="">Email: </label><span>{{ user.email }}</span>
+    </div>
+    <a class="btn center" href="{% url "edit_account" %}" style="text-decoration: none; color:aliceblue;">Editar</a>
+  </article>
+</section>
+{% endblock content %}
