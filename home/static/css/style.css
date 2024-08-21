@@ -18,6 +18,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
 }
 
 .body_font{
@@ -73,9 +74,12 @@ nav a:hover{
 
 
 section{
-    max-width: 45em;
+    max-width: 40em;
     margin-top: 3em;
     margin-inline: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     article{
         padding-bottom: 2rem;
@@ -92,7 +96,6 @@ section{
         }
     }
     a{
-        text-align: center;
         text-decoration: none;
         color: aliceblue;
         background: linear-gradient(
@@ -104,7 +107,6 @@ section{
         padding: 0.6em;
         transition: 0.3s ease-in-out all;
     }
-
 }
 
 section a:hover{
@@ -114,16 +116,72 @@ section a:hover{
 form{
     display: flex;
     flex-direction: column;
+    max-width: 35rem;
+    padding: 1em;
+    div{
+        display: flex;
+        flex-direction: column;
+        label{
+            font-size: 1em;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        input{
+            background: #ffffff11;
+            border: 0px solid;
+            border-radius: 1em;
+            padding: 1em;
+            color: white;
+            transition: all 0.5s ease-in-out;
+        }
+        textarea{
+            background: #ffffff11;
+            border: 0px solid;
+            border-radius: 1em;
+            padding: 1em;
+            color: white;
+            width: 100%;
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+        }
+    }
+
+    button{
+        width: 100%;
+        padding: 0.8rem;
+        margin-top: 0.5rem;
+        border-radius: 1rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        border: 0px;
+        background: linear-gradient(
+            70deg,
+            #3b789d6b,
+            #06005a64
+        );
+    }
+}
+
+form input:focus{
+    outline: none;
+    background-color: #4c76ff17;
+}
+form textarea:focus{
+    outline: none;
+    background-color: #4c76ff17;
 }
 
 .card{
     border-radius: 1.5em;
     background: transparent;
     backdrop-filter: blur(20px);
+    margin-bottom: 1.5rem;
     background-image: linear-gradient(
         90deg,
-        rgba(20,20,20,0.3),
-        rgba(70,70,70,0.3)
+        rgba(70,70,70,0.3),
+        rgba(94, 94, 94, 0.3)
     );
     padding: 1em;
 }
